@@ -9,7 +9,7 @@
                   <h5 class="card-title">Empresas</h5>
                   <table class="table table-responsive table-striped table-hover">
                     <thead>
-                        <tr>
+                        <tr class="text-center">
                             <th scope="col">ID</th>
                             <th scope="col">Nome</th>
                             <th scope="col">CNPJ</th>
@@ -17,7 +17,7 @@
                         </tr>
                     </thead>
                     <!-- Example Text -->
-                    <tbody>
+                    <tbody class="text-center">
                         <tr>
                             <th scope="row">1</th>
                             <td>Carrefour</td>
