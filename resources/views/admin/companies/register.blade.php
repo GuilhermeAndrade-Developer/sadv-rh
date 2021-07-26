@@ -3,8 +3,8 @@
 @section('content')
 <div class="container container-fluid pt-5">
     <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">
+        <form class="card-body row pt-2 g-2">
+            <h5 class="card-title pt-4">
                 Registar Empresa
             </h5>
             <div class="row pt-2 g-2">
@@ -74,7 +74,7 @@
                     Cancel
                 </button>
             </div>
-        </div>
+        </form>
     </div>
 </div>
 @endsection
