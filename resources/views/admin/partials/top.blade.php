@@ -25,8 +25,8 @@
               Funcionários
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Registar Funcionários</a></li>
-              <li><a class="dropdown-item" href="#">Listar Funcionários</a></li>
+              <li><a class="dropdown-item" href="{{ route('admin.employees.new') }}">Registar Funcionários</a></li>
+              <li><a class="dropdown-item" href="{{ route('admin.employees.list') }}">Listar Funcionários</a></li>
             </ul>
           </li>
           {{-- Dropdown Empresas --}}
