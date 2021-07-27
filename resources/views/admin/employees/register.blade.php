@@ -7,51 +7,91 @@
             <h5 class="card-title pt-4">
                 Registar Funcionário
             </h5>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="inputName">
-                    <label for="inputName">Nome</label>
+            <div class="row pt-2 g-2">
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGrid" required>
+                        <label for="floatingInputGrid">Nome</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="lastName" id="lastName" required>
+                        <label for="lastName">Sobrenome</label>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="cpf" id="cpf" required>
+                        <label for="cpf">CPF</label>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="form-floating">
-                    <input type="password" class="form-control" id="inputPassword4">
-                    <label for="inputPassword4">Sobrenome</label>
+            <div class="row pt-2 g-2">
+                <div class="col-md-3">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="cpf" id="cpf" required>
+                        <label for="cpf">CEP</label>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="cpf" id="cpf" required>
+                        <label for="cpf">Endereço</label>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" name="cpf" id="cpf" required>
+                        <label for="cpf">Número</label>
+                    </div>
                 </div>
             </div>
-            <div class="col-12">
-                <label for="inputAddress" class="form-label">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-            </div>
-            <div class="col-12">
-                <label for="inputAddress2" class="form-label">Address 2</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-            </div>
-            <div class="col-md-6">
-                <label for="inputCity" class="form-label">City</label>
-                <input type="text" class="form-control" id="inputCity">
-            </div>
-            <div class="col-md-4">
-                <label for="inputState" class="form-label">State</label>
-                <select id="inputState" class="form-select">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                </select>
-            </div>
-            <div class="col-md-2">
-                <label for="inputZip" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="inputZip">
-            </div>
-            <div class="col-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                    <label class="form-check-label" for="gridCheck">
-                        Check me out
-                    </label>
+            <div class="row pt-2 g-2">
+                <div class="col-md-4">
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>São Paulo</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <label for="floatingSelect">Estado</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="inputCity">
+                        <label for="inputCity">Cidade</label>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="telephone">
+                        <label for="telephone">Telefone</label>
+                    </div>
                 </div>
             </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Sign in</button>
+            <div class="row pt-2 g-2 justify-content-md-end">
+                <div class="col-md-4">
+                    <div class="form-floating">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <option selected>Santander</option>
+                            <option value="1">Carrefour</option>
+                            <option value="2">Pão de Açucar</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <label for="floatingSelect">Empresas</label>
+                    </div>
+                </div>
+            </div>
+            <div class="d-grid gap-2 pt-4 d-md-flex justify-content-md-end">
+                <button class="btn btn-outline-success btn-sm" type="submit">
+                    Registrar
+                </button>
+                <button class="btn btn-outline-danger btn-sm" type="submit">
+                    Cancel
+                </button>
             </div>
         </form>
     </div>
