@@ -3,8 +3,8 @@
 @section('content')
 <div class="container container-fluid pt-5">
     <div class="card">
-        <div class="card-body row pt-2 g2">
-            <h5 class="card-title pt-4">
+        <div class="card-body">
+            <h5 class="card-title">
                 Listar Funcionários
             </h5>
             <table class="table table-responsive table-striped table-hover">
