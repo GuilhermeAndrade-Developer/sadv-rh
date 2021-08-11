@@ -6,6 +6,7 @@ use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\EmployeeController;
+use App\Http\Controllers\Admin\TaxesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,5 +37,14 @@ Route::as('admin.')->middleware(['is_admin', 'auth'])->group(function () {
         'edit'      => 'employees.edit',
         'update'    => 'employees.update',
         'destroy'   => 'employees.delete',
+    ]);
+    Route::resource('/admin/taxes', TaxesController::class)->names([
+        'index'     => 'taxes.list',
+        'create'    => 'taxes.new',
+        'store'     => 'taxes.create',
+        'show'      => 'taxes.view',
+        'edit'      => 'taxes.edit',
+        'update'    => 'taxes.update',
+        'destroy'   => 'taxes.delete',
     ]);
 });
