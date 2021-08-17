@@ -51,10 +51,33 @@
                 <div class="col-md-4">
                     <div class="form-floating">
                         <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                            <option selected>São Paulo</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option selected value="{{ isset($employee) ? $employee->state : null }}">Acre</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Alagoas</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Amapá</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Amazonas</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Bahia</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Ceará</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Distrito Federal</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Espírito Santo</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Goiás</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Maranhão</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Mato Grosso</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Mato Grosso do Sul</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Minas Gerais</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Pará</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Paraíba</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Paraná</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Pernambuco</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Piauí</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Rio de Janeiro</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Rio Grande do Norte</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Rio Grande do Sul</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Rondônia</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Roraima</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Santa Catarina</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         São Paulo</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Sergipe</option>
+                            <option value="{{ isset($employee) ? $employee->state : null }}">         Tocantins</option>
                         </select>
                         <label for="floatingSelect">Estado</label>
                     </div>
