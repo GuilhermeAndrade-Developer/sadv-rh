@@ -6,6 +6,7 @@ use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\EmployeeController;
+use App\Http\Controllers\Admin\PayslipController;
 use App\Http\Controllers\Admin\TaxesController;
 
 /*
@@ -46,5 +47,14 @@ Route::as('admin.')->middleware(['is_admin', 'auth'])->group(function () {
         'edit'      => 'taxes.edit',
         'update'    => 'taxes.update',
         'destroy'   => 'taxes.delete',
+    ]);
+    Route::resource('/admin/payslips', PayslipController::class)->names([
+        'index'     => 'payslips.list',
+        'create'    => 'payslips.new',
+        'store'     => 'payslips.create',
+        'show'      => 'payslips.view',
+        'edit'      => 'payslips.edit',
+        'update'    => 'payslips.update',
+        'destroy'   => 'payslips.delete',
     ]);
 });
