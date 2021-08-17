@@ -47,7 +47,7 @@
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="#">Gerar Holerites</a></li>
               <li><a class="dropdown-item" href="#">Listar Holerites</a></li>
-              <li><a class="dropdown-item" href="#">Registar Tributos</a></li>
+              <li><a class="dropdown-item" href="{{ route('admin.taxes.new') }}">Registar Tributos</a></li>
               <li><a class="dropdown-item" href="#">Listar Tributos</a></li>
             </ul>
           </li>
