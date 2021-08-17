@@ -11,15 +11,9 @@ class Taxes extends Model
 
     protected $fillable = [
 
-        'cnpj',
         'name',
-        'telephone',
-        'cep',
-        'address',
-        'address_number',
-        'state',
-        'city'
-
+        'code',
+        'nature',
     ];
 
 }
