@@ -11,15 +11,21 @@ class Employees extends Model
 
     protected $fillable = [
 
-        'company_name',
-        'cpf',
         'name',
-        'telephone',
+        'cpf',
+        'rg',
+        'pis',
         'cep',
         'address',
         'address_number',
         'state',
-        'city'
+        'city',
+        'telephone',
+        'cargo',
+        'unit',
+        'bank',
+        'branch',
+        'account'
 
     ];
 
