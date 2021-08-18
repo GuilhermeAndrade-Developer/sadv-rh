@@ -10,47 +10,53 @@
             <div class="row pt-2 g-2">
                 <div class="col-md-6">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="floatingInputGrid" required>
-                        <label for="floatingInputGrid">Nome</label>
+                        <input type="text" class="form-control" id="empoyeeName" value="{{ isset($employee) ? $employee->name : null }}" required>
+                        <label for="employeeName">Nome do Funcionário</label>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="form-floating">
-                        <input type="text" class="form-control" name="lastName" id="lastName" required>
-                        <label for="lastName">Sobrenome</label>
+                        <input type="text" class="form-control" id="employeeCpf" value="{{ isset($employee) ? $employee->cpf : null }}" maxlength="11" required>
+                        <label for="employeeCpf">CPF</label>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <div class="form-floating">
-                        <input type="text" class="form-control" name="cpf" id="cpf" required>
-                        <label for="cpf">CPF</label>
+                        <input type="text" class="form-control" id="employeeRg" value="{{ isset($employee) ? $employee->rg : null }}" maxlength="10" required>
+                        <label for="employeeRg">Registro Geral</label>
                     </div>
                 </div>
             </div>
             <div class="row pt-2 g-2">
-                <div class="col-md-3">
+                <div class="col-md-2">
                     <div class="form-floating">
-                        <input type="text" class="form-control" name="cpf" id="cpf" required>
-                        <label for="cpf">CEP</label>
+                        <input type="text" class="form-control" id="employeePis" value="{{ isset($employee) ? $employee->pis : null }}" maxlength="11" required>
+                        <label for="employeePis">PIS/ PASEP</label>
                     </div>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-3">
                     <div class="form-floating">
-                        <input type="text" class="form-control" name="cpf" id="cpf" required>
-                        <label for="cpf">Endereço</label>
+                        <input type="text" class="form-control" id="employeeCep" value="{{ isset($employee) ? $employee->cep : null }}" maxlength="8" required>
+                        <label for="employeeCep">CEP</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control"id="employeeAddress" value="{{ isset($employee) ? $employee->address : null }}" required>
+                        <label for="employeeAddress">Endereço</label>
                     </div>
                 </div>
                 <div class="col-md-1">
                     <div class="form-floating">
-                        <input type="text" class="form-control" name="cpf" id="cpf" required>
-                        <label for="cpf">Número</label>
+                        <input type="text" class="form-control" id="employeeNumber" {{ isset($employee) ? $employee->number : null }} maxlength="11" required>
+                        <label for="employeeNumber">Número</label>
                     </div>
                 </div>
             </div>
             <div class="row pt-2 g-2">
                 <div class="col-md-4">
                     <div class="form-floating">
-                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <select class="form-select" id="employeeState" aria-label="Floating label select">
                             <option selected value="{{ isset($employee) ? $employee->state : null }}">Acre</option>
                             <option value="{{ isset($employee) ? $employee->state : null }}">         Alagoas</option>
                             <option value="{{ isset($employee) ? $employee->state : null }}">         Amapá</option>
@@ -79,32 +85,64 @@
                             <option value="{{ isset($employee) ? $employee->state : null }}">         Sergipe</option>
                             <option value="{{ isset($employee) ? $employee->state : null }}">         Tocantins</option>
                         </select>
-                        <label for="floatingSelect">Estado</label>
+                        <label for="employeeState">Estado</label>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="inputCity">
-                        <label for="inputCity">Cidade</label>
+                        <input type="text" class="form-control" id="employeeCity" value="{{ isset($employee) ? $employee->city : null }}" required>
+                        <label for="employeeCity">Cidade</label>
                     </div>
                 </div>
                 <div class="col-md-2">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="telephone">
-                        <label for="telephone">Telefone</label>
+                        <input type="text" class="form-control" id="employeeTelephone" value="{{ isset($employee) ? $employee->telephone : null }}" required>
+                        <label for="employeeTelephone">Telefone</label>
                     </div>
                 </div>
             </div>
-            <div class="row pt-2 g-2 justify-content-md-end">
-                <div class="col-md-4">
+            <div class="row pt-2 g-2">
+                <div class="col-md-3">
                     <div class="form-floating">
-                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <input type="text" class="form-control" id="employeeCargo" value="{{ isset($employee) ? $employee->cargo : null }}" maxlength="30" required>
+                        <label for="EmployeepCargo">Cargo/ Função Atividade</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="employeeUnit" value="{{ isset($employee) ? $employee->unit : null }}" maxlength="60" required>
+                        <label for="employeeUnit">Unidade</label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-floating">
+                        <select class="form-select" id="employeeCompany" aria-label="Floating label select">
                             <option selected>Santander</option>
                             <option value="1">Carrefour</option>
                             <option value="2">Pão de Açucar</option>
                             <option value="3">Three</option>
                         </select>
-                        <label for="floatingSelect">Empresas</label>
+                        <label for="employeeCompany">Empresas</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-2 g-2">
+                <div class="col-md-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="employeeBank" value="{{ isset($employee) ? $employee->bank : null }}" required>
+                        <label for="employeeBank">Banco</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="employeeBankBranch" value="{{ isset($employee) ? $employee->branch : null }}" required >
+                        <label for="employeeBankBranch">Agência</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="employeeAccount" value="{{ isset($employee) ? $employee->account : null }}" required>
+                        <label for="employeeAccount">Conta Corrente</label>
                     </div>
                 </div>
             </div>

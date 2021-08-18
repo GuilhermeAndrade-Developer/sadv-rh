@@ -21,14 +21,14 @@
             <div class="row pt-2 g-2">
                 <div class="col-md-6">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="payslipName" value="{{ isset($payslip) ? $payslip->name : null }}" maxlength="100" required>
-                        <label for="payslipName">Nome do Funcionário</label>
+                        <input type="text" class="form-control" id="employeeName" value="{{ isset($payslip) ? $payslip->name : null }}" maxlength="100" required>
+                        <label for="employeeName">Nome do Funcionário</label>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="payslipCpf" value="{{ isset($payslip) ? $payslip->cpf : null }}" maxlength="11" required>
-                        <label for="payslipCpf">CPF</label>
+                        <input type="text" class="form-control" id="employeeCpf" value="{{ isset($payslip) ? $payslip->cpf : null }}" maxlength="11" required>
+                        <label for="employeepCpf">CPF</label>
                     </div>
                 </div>
                 <div class="col-md-3">
