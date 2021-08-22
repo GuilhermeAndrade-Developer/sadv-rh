@@ -38,7 +38,34 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        try {
+
+        $this->rules($request);
+        $data = [];
+
+        $company = new CompanyService();
+
+        $data['cnpj']               =   $request->cnpj;
+        $data['name']               =   $request->name;
+        $data['telephone']          =   $request->telephone;
+        $data['cep']                =   $request->cep;
+        $data['address']            =   $request->address;
+        $data['address_number']     =   $request->address_number;
+        $data['state']              =   $request->state;
+        $data['city']               =   $request->city;
+        $data['id']                 =   $request->id;
+
+        if($request->has('id')) {
+            $data['id']    = $request->id;
+            $message = 'Empresa atualizada com sucesso';
+            $company->save($data);
+        } else {
+            $company->save($data);
+            $message = 'Empresa criada com sucesso';
+        }
+
+        return redirect()->route('admin.companies.list')->with('success', $message);
+
+/*         try {
             $this->validate($request, array(
                 'cnpj'              =>  'required|integer|max:14',
                 'name'              =>  'required|max:100',
@@ -75,10 +102,10 @@ class CompanyController extends Controller
             $company->save($data);
             return redirect()->route('admin.companies.list')->with('success', $message);
             
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $message =$e->getMessage();
             return redirect()->back()->withErrors([$message]);
-        }
+        } */
     }
 
     /**
@@ -125,5 +152,19 @@ class CompanyController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function rules(Request $request)
+    {
+        $validated = $request->validate([
+            'cnpj'              =>  'required|integer|max:14',
+            'name'              =>  'required|max:100',
+            'telephone'         =>  'required|integer|max:11',
+            'cep'               =>  'required|integer|max:8',
+            'address'           =>  'required|max:100',
+            'address_number'    =>  'required|integer|max:5',
+            'state'             =>  'required',
+            'city'              =>  'required|max:40'
+        ]);
     }
 }

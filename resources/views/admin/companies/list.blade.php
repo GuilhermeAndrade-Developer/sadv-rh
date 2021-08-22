@@ -4,9 +4,14 @@
 <div class="container container-fluid pt-5">
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title">
-                Listar Empresas
-            </h5>
+            <div class="card-title py-3 d-flex align-items-md-center">
+                <h5 class="position-relative me-auto">
+                    Listar Empresas
+                </h5>
+                <div class="justify-content-md-end">
+                    <a class="btn btn-outline-success" href="{{ route('admin.company.new') }}">Registar Empresas</a>
+                </div>
+            </div>
             <table class="table table-responsive table-striped table-hover">
                 <thead>
                     <tr class="text-center">

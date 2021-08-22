@@ -21,15 +21,13 @@ Route::get('/', [App\Http\Controllers\Auth\LoginController::class, 'login'])->na
 
 Route::as('admin.')->middleware(['is_admin', 'auth'])->group(function () {
     Route::get('/admin', [HomeController::class, 'index'])->name('index');
-    Route::resource('/admin/companies', CompanyController::class)->names([
-        'index'     => 'companies.list',
-        'create'    => 'companies.new',
-        'store'     => 'companies.create',
-        'show'      => 'companies.view',
-        'edit'      => 'companies.edit',
-        'update'    => 'companies.update',
-        'destroy'   => 'companies.delete'
-    ]);
+
+    Route::get('/admin/lista-empresas', [CompanyController::class, 'index'])->name('company');
+    Route::get('/admin/criar-empresa', [CompanyController::class, 'create'])->name('company.new');
+    Route::post('/admin/criar-empresa', [CompanyController::class, 'store'])->name('company.create');
+    Route::get('/admin/editar-empresa/{id}', [CompanyController::class, 'edit'])->name('company.edit');
+    Route::get('/admin/deletar-empresa/{id}', [CompanyController::class, 'destroy'])->name('company.delete');
+
     Route::resource('/admin/employees', EmployeeController::class)->names([
         'index'     => 'employees.list',
         'create'    => 'employees.new',

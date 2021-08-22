@@ -35,8 +35,7 @@
               Empresas
             </a>
             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="{{ route('admin.companies.new') }}">Registar Empresas</a></li>
-              <li><a class="dropdown-item" href="{{ route('admin.companies.list') }}">Listar Empresas</a></li>
+              <li><a class="dropdown-item" href="{{ route('admin.company') }}">Listar Empresas</a></li>
             </ul>
           </li>
           {{-- Dropdown Demostrativos --}}

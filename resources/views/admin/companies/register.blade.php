@@ -12,7 +12,7 @@
             </div>
     @endif
     <div class="card">
-        <form  action="{{ route('admin.companies.create') }}" method="POST" enctype="multipart/form-data" class="card-body row pt-2 g-2">
+        <form action="{{ route('admin.company.create') }}" method="POST" enctype="multipart/form-data" class="card-body row pt-2 g-2">
             @csrf
             <h5 class="card-title pt-4">
                 Registar Empresa
@@ -28,13 +28,13 @@
                 </div>
                 <div class="col-md-4">
                     <div class="form-floating">
-                        <input type="text" class="form-control" name="cpf" id="cpf" value="{{ isset($company) ? $company->cnpj : null }}" maxlength="14" required>
-                        <label for="cpf">CNPJ</label>
+                        <input type="text" class="form-control" id="cnpj" value="{{ isset($company) ? $company->cnpj : null }}" maxlength="14" required>
+                        <label for="cnpj">CNPJ</label>
                     </div>
                 </div>
                 <div class="col-md-2">
                     <div class="form-floating">
-                        <input type="text" class="form-control" name="telephone" id="telephone" value="{{ isset($company) ? $company->telephone : null }}" maxlength="11" required>
+                        <input type="text" class="form-control" id="telephone" value="{{ isset($company) ? $company->telephone : null }}" maxlength="11" required>
                         <label for="telephone">Telefone</label>
                     </div>
                 </div>
@@ -42,19 +42,19 @@
             <div class="row pt-2 g-2">
                 <div class="col-md-3">
                     <div class="form-floating">
-                        <input type="text" class="form-control" name="cep" id="cep" value="{{ isset($company) ? $company->cep : null }}" maxlength="8" required>
+                        <input type="text" class="form-control" id="cep" value="{{ isset($company) ? $company->cep : null }}" maxlength="8" required>
                         <label for="cep">CEP</label>
                     </div>
                 </div>
                 <div class="col-md-8">
                     <div class="form-floating">
-                        <input type="text" class="form-control" name="address" id="address" value="{{ isset($company) ? $company->address : null }}" maxlength="100" required>
+                        <input type="text" class="form-control" id="address" value="{{ isset($company) ? $company->address : null }}" maxlength="100" required>
                         <label for="address">Endereço</label>
                     </div>
                 </div>
                 <div class="col-md-1">
                     <div class="form-floating">
-                        <input type="text" class="form-control" name="address_number" id="address_number" value="{{ isset($company) ? $company->address_number : null }}"  maxlength="5" required>
+                        <input type="text" class="form-control" id="address_number" value="{{ isset($company) ? $company->address_number : null }}"  maxlength="5" required>
                         <label for="address_number">Número</label>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
             <div class="row pt-2 g-2">
                 <div class="col-md-4">
                     <div class="form-floating">
-                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                        <select class="form-select" id="floatingSelect" aria-label="Floating label select">
                             <option selected value="{{ isset($company) ? $company->state : null }}">Acre</option>
                             <option value="{{ isset($company) ? $company->state : null }}">         Alagoas</option>
                             <option value="{{ isset($company) ? $company->state : null }}">         Amapá</option>
