@@ -5,20 +5,27 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Companies extends Model
+class Employees extends Model
 {
     use HasFactory;
 
     protected $fillable = [
 
-        'cnpj',
         'name',
-        'telephone',
+        'cpf',
+        'rg',
+        'pis',
         'cep',
         'address',
         'address_number',
         'state',
-        'city'
+        'city',
+        'telephone',
+        'cargo',
+        'unit',
+        'bank',
+        'branch',
+        'account'
 
     ];
 
