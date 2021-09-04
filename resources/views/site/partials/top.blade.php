@@ -18,16 +18,6 @@
                       <li><a class="dropdown-item" href="#">Listar Funcionários</a></li>
                     </ul>
                 </li>
-                {{-- Dropdown Empresas --}}
-                <li class="nav-item px-2 dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Empresas
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Registar Empresas</a></li>
-                      <li><a class="dropdown-item" href="#">Listar Empresas</a></li>
-                    </ul>
-                </li>
                 {{-- Dropdown Demostrativos --}}
                 <li class="nav-item px-2 dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

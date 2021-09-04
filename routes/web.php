@@ -2,12 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\EmployeeController;
 use App\Http\Controllers\Admin\PayslipController;
 use App\Http\Controllers\Admin\TaxesController;
+use App\Http\Controllers\Site\HomeController as SiteHomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +18,14 @@ use App\Http\Controllers\Admin\TaxesController;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('index');
+
+Route::as('site.')->middleware(['is_admin', 'auth'])->group(Function() {
+    Route::get('/site', [SiteHomeController::class, 'index'])->name('index');
+
+    Route::resource('/site/employees', EmployeeController::class);
+    Route::resource('/site/payslip', PayslipController::class);
+    Route::resource('/site/taxes', TaxesController::class);
+});
 
 Route::as('admin.')->middleware(['is_admin', 'auth'])->group(function () {
     Route::get('/admin', [HomeController::class, 'index'])->name('index');
