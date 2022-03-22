@@ -55,7 +55,8 @@ class CompanyController extends Controller
 
             $company->save($data);
 
-            return redirect()->route('admin.companies.list', $company->id );
+            // return redirect()->route('admin.companies.list', $company->id);
+            return view('admin.companies.list');
     }
 
     /**
