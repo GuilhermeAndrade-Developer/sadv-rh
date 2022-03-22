@@ -62,7 +62,7 @@
                 <div class="col-md-4">
                     <div class="form-floating">
                         <select class="form-select" id="floatingSelect" aria-label="state" name="state">
-                            <option selected value="{{ isset($company) ? $company->state : null }}" name="state">Acre</option>
+                            <option selected value="Acre" name="state">Acre</option>
                             <option value="{{ isset($company) ? $company->state : null }}" name="state">         Alagoas</option>
                             <option value="{{ isset($company) ? $company->state : null }}" name="state">         Amapá</option>
                             <option value="{{ isset($company) ? $company->state : null }}" name="state">         Amazonas</option>
