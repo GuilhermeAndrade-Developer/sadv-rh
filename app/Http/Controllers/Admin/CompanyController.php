@@ -38,11 +38,10 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        try {
-            $this->rules($request);
+            // $this->rules($request);
             $data = [];
 
-            $companyService = new CompanyService();
+            $company = new CompanyService();
 
             $data['cnpj']               =   $request->cnpj;
             $data['name']               =   $request->name;
@@ -54,20 +53,9 @@ class CompanyController extends Controller
             $data['city']               =   $request->city;
             $data['id']                 =   $request->id;
 
-            if($request->has('id') && !empty($request->id)) {
-                $message = 'Empresa atualizada com sucesso';
-            } else {
-                $message = 'Empresa criada com sucesso';
-            }
+            $company->save($data);
 
-            $data['id']    = $request->id;
-            $companyService->save($data);
-
-            return redirect()->route('admin.companies.list')->with('success', $message);
-        } catch (\Exception $e) {
-            $message =$e->getMessage();
-            return redirect()->back()->withErrors([$message]);
-        }
+            return redirect()->route('admin.companies.list', $company->id );
     }
 
     /**

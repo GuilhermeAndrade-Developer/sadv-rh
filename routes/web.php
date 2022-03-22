@@ -17,10 +17,10 @@ use App\Http\Controllers\Site\HomeController as SiteHomeController;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('index');
+Route::get('', [App\Http\Controllers\Auth\LoginController::class, 'login'])->name('index');
 
 Route::as('site.')->middleware(['is_admin', 'auth'])->group(Function() {
-    Route::get('/site', [SiteHomeController::class, 'index'])->name('index');
+    Route::get('/', [SiteHomeController::class, 'index'])->name('index');
 
     Route::resource('/site/employees', EmployeeController::class);
     Route::resource('/site/payslip', PayslipController::class);
